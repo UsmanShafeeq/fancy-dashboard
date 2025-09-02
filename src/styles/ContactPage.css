@@ -1,0 +1,58 @@
+.table-container {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+  /* only horizontal scroll if needed */
+  overflow-y: visible;
+  /* allow table to expand vertically */
+}
+
+.contact-table {
+  width: 100%;
+  /* fit parent container */
+  table-layout: fixed;
+  /* distribute columns evenly */
+}
+
+.contact-table th,
+.contact-table td {
+  padding: 14px 18px;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 15px;
+}
+
+.contact-table th {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  /* blue gradient header */
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.contact-table tr:hover {
+
+  transform: scale(1.01);
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #3b82f6;
+  transition: transform 0.2s ease-in-out;
+}
+
+.table-img:hover {
+  transform: scale(1.15);
+}

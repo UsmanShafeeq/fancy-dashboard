@@ -1,0 +1,98 @@
+/* Table wrapper */
+.table-container {
+  background: black;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  animation: fadeInUp 0.6s ease;
+
+  /* Make table scrollable if content is tall */
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Table base styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 10px;
+}
+
+/* Table header */
+thead th {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #f1f5f9; /* light text for dark background */
+  background: black;
+}
+
+/* Table body rows */
+tbody tr {
+  border-bottom: 1px solid #2e3a59;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Alternating row colors */
+tbody tr:nth-child(even) {
+  background: black;
+}
+
+/* Hover effect on rows */
+tbody tr:hover {
+  background: black;
+  transform: scale(1.01);
+}
+
+/* Table cells */
+td {
+  padding: 12px 16px;
+  color: #f1f5f9;
+}
+
+/* Amount badge */
+.amount-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  background: #e0f7fa;
+  color: #00796b;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.amount-badge:hover {
+  transform: scale(1.08);
+  background: #2ee6d6;
+  color: #fff;
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling for modern look */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #0f172a;
+}

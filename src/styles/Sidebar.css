@@ -1,0 +1,128 @@
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.4);
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+}
+
+/* Logo */
+.sidebar-logo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #38bdf8;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 10px rgba(56, 189, 248, 0.6);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Profile Section */
+.sidebar-profile {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.profile-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #38bdf8;
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.8);
+}
+
+.profile-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.profile-role {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* Menu Heading */
+.menu-heading {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #94a3b8;
+  margin: 20px 0 8px 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Menu Items */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.sidebar-menu li {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  margin: 6px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: transparent;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar-menu li:hover {
+  background: linear-gradient(90deg, rgba(56, 189, 248, 0.15), rgba(56, 189, 248, 0.25));
+  color: #38bdf8;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transform: translateX(6px);
+}
+
+.sidebar-menu li svg {
+  margin-right: 14px;
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-menu li:hover svg {
+  transform: scale(1.25);
+  color: #38bdf8;
+}
+
+/* Active Menu Item */
+.sidebar-menu li.active {
+  background: linear-gradient(90deg, #38bdf8 0%, #06b6d4 100%);
+  color: #0f172a;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.6);
+}
+
+.sidebar-menu li.active svg {
+  color: #0f172a;
+}

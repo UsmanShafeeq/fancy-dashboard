@@ -1,0 +1,17 @@
+/* Sale Quality Chart Container */
+.sale-quality-container {
+  background-color: #000; /* black background */
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  margin: auto;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .sale-quality-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
