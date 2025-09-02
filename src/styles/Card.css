@@ -1,6 +1,6 @@
 /* src/styles/Card.css */
 .card {
-  background:black;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #111827 100%);
   color: #e2e8f0;
   padding: 20px;
   border-radius: 10px;
@@ -36,12 +36,13 @@
   margin: 0;
   font-size: 1.3rem;
   font-weight: bold;
+  color: white;
 }
 
 .card-info p {
   margin: 0;
   font-size: 0.95rem;
-  color: #94a3b8;
+   color: #e2e8f0;
 }
 
 /* Progress Circle */
@@ -53,7 +54,7 @@
 }
 
 .progress-ring-bg {
-  stroke: #1e293b;
+  stroke:yellow;
 }
 
 .progress-ring-fill {

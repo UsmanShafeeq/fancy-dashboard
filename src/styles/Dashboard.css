@@ -1,194 +1,111 @@
-/* ========== Dashboard Wrapper ========== */
+/* Dashboard Container */
 .dashboard-container {
-  width: 100%; /* full width */
-  background: linear-gradient(135deg, #0f172a, #1e293b); /* dark gradient */
-  padding: 20px 0 20px 20px; /* remove right padding */
-  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #111827 100%);
+  color: #f9fafb; /* Light text */
 }
 
-/* ========== Dashboard Cards Wrapper ========== */
-.dashboard-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* spacing between cards */
-  margin: 20px 0 20px 0; /* remove right margin */
-  justify-content: flex-start;
-}
-
-/* Single Card */
-.dashboard-card {
-  flex: 1 1 260px; /* responsive, min 260px */
-  background: linear-gradient(135deg, #0f172a, #1e293b); /* same gradient */
-  border-radius: 16px;
-  padding: 24px;
-  color: #f1f5f9;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Dashboard Title */
+h4 {
+  font-size: 1.1rem;
+  font-weight: 100;
+  color: white;
+  margin-top: 55px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   position: relative;
-  overflow: hidden;
 }
 
-/* Hover animation */
-.dashboard-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-}
-
-/* Left side (text block) */
-.card-left {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  z-index: 1;
-}
-
-/* Number / Value */
-.card-value {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #22d3ee; /* cyan accent */
-}
-
-/* Label text */
-.card-label {
-  font-size: 0.95rem;
-  color: #94a3b8; /* muted gray */
-}
-
-/* Percentage change */
-.card-percentage {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-top: 4px;
-  color: #34d399; /* default green */
-}
-
-/* Negative percentages */
-.card-percentage.negative {
-  color: #f87171; /* red */
-}
-
-/* Right side: Circular progress or icon */
-.card-right {
-  font-size: 2.2rem;
-  color: #818cf8; /* violet accent */
-  z-index: 1;
-}
-
-/* Optional glowing accent background */
-.dashboard-card::after {
+h4::after {
   content: "";
-  position: absolute;
-  top: -30%;
-  right: -30%;
-  width: 200px;
-  height: 200px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.15), transparent 70%);
-  border-radius: 50%;
-  z-index: 0;
+  display: block;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #14b8a6);
+  margin: 8px auto 0;
+  border-radius: 2px;
+  transition: width 0.4s ease;
 }
 
-/* ========== Chart + Transactions wrapper ========== */
+h4:hover::after {
+  width: 80px;
+}
+
+/* Welcome Text */
+.dashboard-container p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f9fafb;
+  margin-bottom: 20px;
+}
+
+/* Cards Section */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+/* Chart + Transactions */
 .chart-section {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
 }
 
-/* Chart takes more space */
+/* Charts */
 .chart-container {
-  flex: 2;
-  min-width: 200px;
-  gap: 10px;
-  background-color: #000;
-  border-radius: 12px;
-  padding: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: #1e293b; /* Dark card */
+  padding: 18px;
+  border-radius: 15px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Transactions takes less space */
+.chart-container:hover {
+  transform: translateY(-6px);
+  background: #273449;
+  box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
+}
+
+/* Transactions */
 .transactions-container {
-  flex: 1;
-  border-radius: 12px;
-  padding: 16px;
-  color: #f1f5f9;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: #1e293b;
+  padding: 18px;
+  border-radius: 15px;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@media (max-width: 640px) {
-  .dashboard-card {
-    flex: 1 1 100%;
-    max-width: unset;
-  }
-
-  .dashboard-cards {
-    margin: 16px 0;
-  }
+.transactions-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(147, 51, 234, 0.35);
 }
 
-/* ========== Extra Charts Section ========== */
+.transactions-container h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #3b82f6; /* Accent */
+}
+
+/* Extra Charts */
 .extra-charts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 10px;
-  padding: 20px;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  gap: 20px;
+  margin-top: 20px;
 }
 
-.extra-charts:hover {
-  transform: scale(1.01);
-}
-
-.extra-charts .chart-card {
-  background: linear-gradient(135deg, #0f172a, #1e293b); /* same as dashboard cards */
-  border-radius: 10px;
-  transition: all 0.3s ease-in-out;
-  height: 250px; /* Fixed small size */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Center content */
-}
-
-.extra-charts .chart-card:hover {
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.7);
-  transform: translateY(-4px);
-}
-
-.extra-charts h3 {
-  color: #f1f5f9;
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-.extra-charts canvas,
-.extra-charts svg {
-  width: 100% !important;
-  height: 100% !important;
-  max-height: 200px; /* same chart area */
-}
-
-/* Keep all charts same size */
-.extra-charts .chart-card.wide {
-  grid-column: span 1;
-}
-
-/* ========== Responsive tweaks ========== */
+/* Responsive */
 @media (max-width: 1024px) {
   .chart-section {
-    flex-direction: column;
-  }
-
-  .chart-container,
-  .transactions-container {
-    flex: 1 1 100%;
-    min-width: unset;
+    grid-template-columns: 1fr;
   }
 }

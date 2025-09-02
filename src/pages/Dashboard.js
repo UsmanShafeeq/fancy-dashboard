@@ -1,3 +1,4 @@
+// pages/Dashboard.js
 import { FiMail, FiShoppingCart, FiUser, FiActivity } from "react-icons/fi";
 
 import Card from "../components/Card";
@@ -12,8 +13,10 @@ import "./../styles/Dashboard.css";
 function Dashboard() {
   return (
     <div className="dashboard-container">
+      {/* Welcome Message */}
+      <h4>Welcome to our Dashboard</h4>
+
       {/* Top Cards */}
-      <p>Welcome to our Dashboard</p>
       <div className="dashboard-cards">
         <Card
           icon={<FiMail />}
@@ -45,23 +48,21 @@ function Dashboard() {
         />
       </div>
 
-      {/* Chart + Transactions Section */}
+      {/* Chart + Transactions */}
       <div className="chart-section">
-        {/* Left: Revenue Chart */}
         <div className="chart-container">
           <RevenueLineChart />
         </div>
-
-        {/* Right: Recent Transactions */}
         <div className="transactions-container">
-          <h3>Recent Transactions</h3>
+          
           <RecentTransactions />
         </div>
       </div>
 
-      {/* Extra Charts Section */}
+      {/* Extra Charts */}
       <div className="extra-charts">
         <div className="chart-container">
+          <p>ghgh</p>
           <PieChart />
         </div>
         <div className="chart-container">

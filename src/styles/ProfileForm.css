@@ -1,18 +1,104 @@
-/* Full page container */
+/* 🌐 Page Container: full-screen center with gradient */
 .page-container {
   display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
-  height: 100vh;           /* full viewport height */
-  
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #2563eb);
+  padding: 20px;
+  margin-top: 40px;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Centered box */
-.center-div {
-  background: white;
-  padding: 30px 50px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* 💎 Form Card with Glassmorphism Effect */
+.form-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  max-width: 420px;
+  width: 100%;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.form-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* 🎯 Title */
+.form-title {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* 📌 Input Groups */
+.form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #e5e7eb;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+  font-size: 15px;
+}
+
+.form-group input::placeholder {
+  color: #cbd5e1;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border: 1px solid #60a5fa;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* 🚀 Submit Button */
+.submit-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: #fff;
+  padding: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #1e40af, #1d4ed8);
+  transform: scale(1.03);
+}
+
+/* ✨ File Upload (Profile Image) */
+.form-group input[type="file"] {
+  padding: 8px;
+  border: none;
+  background: transparent;
+  color: #e5e7eb;
 }

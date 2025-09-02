@@ -13,6 +13,7 @@ const RecentTransactions = () => {
 
   return (
     <div className="table-container">
+      <h3 style={{ color: "white" }}>Recent Transactions</h3>
       <table>
         
         <tbody>

@@ -20,7 +20,7 @@ function GeoTrafficMap() {
   return (
     <div
       style={{
-        backgroundColor: "#000",
+
         borderRadius: "12px",
         padding: "20px",
       }}

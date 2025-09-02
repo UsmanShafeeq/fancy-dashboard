@@ -1,27 +1,21 @@
-/* Pie Chart Container */
 .pie-chart-container {
-    background-color: #000;
-    /* black background */
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin: auto;
 }
 
-/* Chart title */
 .pie-chart-title {
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    color: #f1f5f9;
-    /* light text for visibility */
-    margin-bottom: 15px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #f1f5f9;
+  margin-bottom: 15px;
 }
 
-/* Responsive for smaller screens */
 @media (max-width: 768px) {
-    .pie-chart-container {
-        max-width: 100%;
-        padding: 15px;
-    }
+  .pie-chart-container {
+    max-width: 100%;
+    padding: 15px;
+  }
 }

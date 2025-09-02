@@ -18,24 +18,25 @@ function App() {
           <Sidebar />
         </aside>
 
-        {/* Main Content Area */}
+        {/* Main Section */}
         <div className="main-section">
           {/* Topbar */}
           <header className="topbar">
             <Topbar />
           </header>
 
-          {/* Pages */}
+          {/* Content */}
           <main className="content-area">
             <Routes>
-              <Route path="/" element={<Dashboard />} />             {/* Default */}
-              <Route path="/manageteam" element={<ManageTeam />} />  {/* Manage Team */}
-              <Route path="/contact" element={<ContactPage />} />    {/* Contact Information */}
-              <Route path="/ProfileForm" element={<ProfileForm />} />    {/* Contact Information */}
+              <Route path="/" element={<Dashboard />} />             
+              <Route path="/manageteam" element={<ManageTeam />} />  
+              <Route path="/contact" element={<ContactPage />} />    
+              <Route path="/profileform" element={<ProfileForm />} /> 
             </Routes>
           </main>
 
-          
+          {/* ✅ Footer outside main */}
+          <Footer />
         </div>
       </div>
     </Router>

@@ -2,6 +2,7 @@
   padding: 40px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   min-height: 100vh;
+  margin-right: 120px;
 }
 
 .page-title {
@@ -26,9 +27,7 @@
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
   max-width: 1000px;
-  /* limit row width */
   margin: 0 auto;
-  /* center the grid itself */
   justify-content: center;
 }
 
@@ -41,7 +40,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   overflow: hidden;
-
 }
 
 .team-card::before {
